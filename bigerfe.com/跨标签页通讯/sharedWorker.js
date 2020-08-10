@@ -20,9 +20,11 @@ fetchBtn.addEventListener("click", (e) => {
   send("__FETCH");
 });
 
-myWorker.port.onmessage = (e) => {
+myWorker.port.start();
+
+myWorker.port.addEventListener("message", (e) => {
   console.log("Reciver:", e.data);
   messageBox.innerText = e.data;
-};
+});
 
 if (window.myWorker === undefined) window.myWorker = myWorker;
