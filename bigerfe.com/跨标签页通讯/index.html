@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        max-width: 375px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      跨页通信
+    </h1>
+    <section class="part">
+      <h2>
+        Broadcast Channel
+      </h2>
+      <iframe src="broadChannel.html" frameborder="2"></iframe>
+      <iframe src="broadChannel.html" frameborder="2"></iframe>
+    </section>
+    <section class="part">
+      <h2>
+        postMessage
+      </h2>
+      <cite>
+        <ul>
+          <li>
+            允许不同源，但是双方都要调用该API
+          </li>
+          <li>
+            目前只能<mark>与子窗口</mark>通信，也有可能是我功力太浅
+          </li>
+        </ul>
+      </cite>
+      <iframe src="postMessage.html" frameborder="2"></iframe>
+    </section>
+  </body>
+</html>
