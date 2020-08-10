@@ -25,17 +25,41 @@
       <h2>
         postMessage
       </h2>
-      <cite>
-        <ul>
-          <li>
-            允许不同源，但是双方都要调用该API
-          </li>
-          <li>
-            目前只能<mark>与子窗口</mark>通信，也有可能是我功力太浅
-          </li>
-        </ul>
-      </cite>
+
+      <ul>
+        <li>
+          允许不同源，但是双方都要调用该API
+        </li>
+        <li>
+          目前只能<em>与子窗口</em>通信，也有可能是我功力太浅
+        </li>
+      </ul>
+
       <iframe src="postMessage.html" frameborder="2"></iframe>
+    </section>
+    <section class="part">
+      <h2>
+        Shared Worker
+      </h2>
+
+      <ul>
+        <li>
+          信息会被缓存在Shared Worker那里，当<em> 被fetch的时候 </em>再获取。
+        </li>
+        <li>
+          好像是不能
+          <em>主动</em>
+          给主线程发信息的，当然也有可能是我功力不够
+        </li>
+        <li>
+          由于无法读取本地文件的限制，本方法<em>必须</em>使用server，不能直接打开。
+          推荐使用<code>http-server -c-1 path-to-your-folder</code
+          >的命令。注意是整个文件夹的路径。
+        </li>
+      </ul>
+
+      <iframe src="sharedWorker.html" frameborder="2"></iframe>
+      <iframe src="sharedWorker.html" frameborder="2"></iframe>
     </section>
   </body>
 </html>
