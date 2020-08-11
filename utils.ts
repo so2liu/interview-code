@@ -23,3 +23,7 @@ export function myConsole(input: any) {
   console.log(input);
   return input;
 }
+
+export function devideLine(title: string) {
+  console.log(`============ [${title}] =============`);
+}
