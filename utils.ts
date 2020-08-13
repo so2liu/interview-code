@@ -8,8 +8,15 @@ function test<T>(toTest: T, standardValue?: T) {
   return toTest;
 }
 
-export const myTest = <T>(toTest: T, standardValue?: T) =>
-  console.log("[TEST]", JSON.stringify(test(toTest, standardValue), null, 2));
+export const myTest = <T>(
+  toTest: T,
+  standardValue?: T,
+  describe: string = ""
+) =>
+  console.log(
+    `[TEST${describe ? " " + describe : ""}]`,
+    JSON.stringify(test(toTest, standardValue), null, 2)
+  );
 
 export function buildEmptyMatrix(m: number, n: number) {
   const matrix = new Array(m);
