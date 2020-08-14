@@ -8,11 +8,11 @@ function MyPromise(constructor) {
   };
 
   function resolve(value) {
-    setTimeout(() => {
-      callbacks.forEach((f) => {
-        f(value);
+    callbacks.forEach((f) => {
+      queueMicrotask(() => {
+        value = f(value); // 记得把return作为value传给下一个
       });
-    }, 0);
+    });
   }
 
   constructor(resolve);
@@ -21,8 +21,14 @@ function MyPromise(constructor) {
 const p = new MyPromise((resolve, reject) => {
   setTimeout(() => {
     console.log(1);
-    resolve(2);
+    resolve(1);
   }, 2000);
 })
-  .then((value) => console.log(value))
-  .then((value) => console.log(value + 1));
+  .then((value) => {
+    console.log(value + 1);
+    return value + 1;
+  })
+  .then((value) => {
+    console.log(value + 1);
+    return value + 1;
+  });
