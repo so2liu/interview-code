@@ -1,4 +1,4 @@
-import { devideLine } from "../utils";
+import { devideLine } from "../../utils";
 
 // 实现bind
 devideLine("myBind");

@@ -1,4 +1,4 @@
-import { myTest } from "../utils";
+import { myTest } from "../../utils";
 
 function getType(x: any) {
   const typeofType = typeof x;

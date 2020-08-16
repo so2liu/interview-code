@@ -1,4 +1,4 @@
-import { myTest } from "../utils";
+import { myTest } from "../../utils";
 
 class IterateAble {
   protected __pos: number;

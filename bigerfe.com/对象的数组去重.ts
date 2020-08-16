@@ -1,6 +1,6 @@
 // 对象数组去重
 
-import { myTest } from "../utils";
+import { myTest } from "../../utils";
 
 interface IdWise {
   id: number;

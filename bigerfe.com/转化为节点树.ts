@@ -1,4 +1,4 @@
-import { myTest } from "../utils";
+import { myTest } from "../../utils";
 
 interface SingleNode {
   id: number;

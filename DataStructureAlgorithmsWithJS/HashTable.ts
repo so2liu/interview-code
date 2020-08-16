@@ -1,4 +1,4 @@
-import { myTest } from "../utils";
+import { myTest } from "../../utils";
 import { performance } from "perf_hooks";
 
 class HashTable {

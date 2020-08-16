@@ -1,4 +1,4 @@
-import { myTest } from "../utils";
+import { myTest } from "../../utils";
 
 function deepCopy<T>(input: T): T {
   if (typeof input !== "object") return input;
