@@ -1,23 +1,7 @@
 import { myTest } from "../utils";
 
-class MyNode<T> {
-  value: T;
-  next: MyNode<T> | null;
-  protected _priority: number;
-
-  constructor(value: T, priority: number) {
-    this.value = value;
-    this.next = null;
-    this._priority = priority;
-  }
-
-  get priority() {
-    return this._priority;
-  }
-}
-
 class PriorityQueue<T> {
-  head: MyNode<T> | null;
+  head: PriorityQueue.MyNode<T> | null; // 不知道该怎么写
   protected _length: number;
 
   constructor() {
@@ -30,7 +14,7 @@ class PriorityQueue<T> {
     this._length++;
 
     // queue is empty
-    const newNode = new MyNode(value, priority);
+    const newNode = new PriorityQueue.MyNode(value, priority);
     if (this.head === null) return (this.head = newNode);
 
     let current = this.head;
@@ -79,6 +63,24 @@ class PriorityQueue<T> {
 
   get length() {
     return this._length;
+  }
+}
+
+namespace PriorityQueue {
+  export class MyNode<T> {
+    value: T;
+    next: MyNode<T> | null;
+    protected _priority: number;
+
+    constructor(value: T, priority: number) {
+      this.value = value;
+      this.next = null;
+      this._priority = priority;
+    }
+
+    get priority() {
+      return this._priority;
+    }
   }
 }
 

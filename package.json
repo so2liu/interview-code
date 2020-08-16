@@ -10,8 +10,8 @@
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "watch": "tsnd --respawn",
-    "node": "node-dev --respawn"
+    "ts": "tsnd --respawn --no-notify",
+    "js": "node-dev --respawn --no-notify"
   },
   "keywords": [],
   "author": "",
