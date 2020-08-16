@@ -1,22 +1,16 @@
-function test<T>(toTest: T, standardValue?: T) {
-  if (
-    typeof toTest === "object" &&
-    JSON.stringify(toTest) === JSON.stringify(standardValue)
-  )
-    return true;
-  if (toTest === standardValue) return true;
-  return toTest;
-}
+export const myTest = <T>(toTest: T, standardValue?: T, describe?: string) => {
+  let isPassed =
+    typeof toTest === "object"
+      ? JSON.stringify(toTest) === JSON.stringify(standardValue)
+      : toTest === standardValue;
 
-export const myTest = <T>(
-  toTest: T,
-  standardValue?: T,
-  describe: string = ""
-) =>
-  console.log(
-    `[TEST${describe ? " " + describe : ""}]`,
-    JSON.stringify(test(toTest, standardValue), null, 2)
-  );
+  const describeStr = describe ? ` ${describe}` : "";
+
+  if (isPassed) return console.log(`[Info] Passed`);
+
+  console.error(`[Error${describeStr}] ${JSON.stringify(toTest, null, 2)}`);
+  return;
+};
 
 export function buildEmptyMatrix(m: number, n: number) {
   const matrix = new Array(m);
