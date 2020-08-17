@@ -1,0 +1,304 @@
+/*资讯栏板块*/
+.information-plate-gb{
+  height:380px;
+  width:501px;
+  position:relative;
+  overflow:hidden;
+  float:left;
+  margin-left:37px;
+}
+/*资讯栏板块上面的目录行*/
+.information-catalogue-row{
+  width:600px;
+  height:38px;
+  border-bottom:1px solid #e3e2e2;
+  padding:bottom -2px;
+  margin-left:-31px;
+  
+}
+/*资讯栏板块上面的每个目录*/
+.information-catalogue{
+  list-style-type:none;
+  width:116px;
+  height:36px;
+  float:left;
+  position:relative;
+}
+/*资讯栏板块上面目录的名字*/
+.information-catalogue-name{
+  text-decoration:none;
+  display:block;
+  font-size:18px;
+  width:100px;
+  height:34px;
+  line-height:34px;
+  text-align:center;
+  margin-top:3px;
+  transition:all 0.25s;
+  color:#000000;
+}
+.information-catalogue:hover .information-catalogue-name{
+  font-weight:600;
+  color:#1da6ba;
+}
+/*资讯栏板块上面目录的名字下面的长方形和菱形*/
+.information-catalogue-name-bottom{
+  width:39px;
+  height:10px;
+  margin-left:31px;
+  background-color:f5f5f5;
+  position:relative;
+  margin-top:-4px;
+  background-image:url(../index_image/image/comm-spr.png);
+  background-position:120px 201px;
+  opacity:0;
+}
+/*隐藏在资讯栏板块上面目录的名字时下面的长方形和菱形*/
+.information-catalogue:hover .information-catalogue-name-bottom{
+  animation:orthogon-rhombus 0.5s;
+  animation-fill-mode:forwards;
+}
+/*资讯栏板块上面目录栏下面的长方形和菱形触发事件显示，默认显示第一个*/
+.information-catalogue-row .n>.information-catalogue-name-bottom{
+  opacity:1;
+}
+/*资讯栏板块上面目录的名字触发事件加粗变色，默认显示第一个*/
+.information-catalogue-row .n>.information-catalogue-name{
+  color:#1da6ba;
+  font-weight:600;
+}
+
+@keyframes information-right-sm-rectangle{
+  0% {background-color:#e3e2e2;}
+  100% {background-color:#1da6ba;}
+}
+/*资讯栏板块中间的内容*/
+.information-items{
+  width:501px;
+  height:300px;
+  display:none;
+}
+/*资讯栏板块的第一条内容*/
+.information-items1{
+  width:450px;
+  margin-left:30px;
+  height:61px;
+  line-height:60px;
+  text-align:center;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+  font-size:22px;
+  font-weight:600;
+  color:#0da0b4;
+  font-family:"微软雅黑";
+  background-image:url("../index_image/image/index-spr.png");
+  background-position:-34px 115px;
+}
+/*资讯栏板块的第一条内容的字*/
+.information-items1>a{
+  text-decoration:none;
+  font-size:22px;
+  font-weight:600;
+  color:#0da0b4;
+}
+.information-items1:hover>a{
+  color:#cc9933;
+}
+/*资讯栏板块的2-7条内容*/
+.information-items2-7{
+  height:39px;
+  width:501px;
+  border-top:1px solid #e3e2e2;
+  position:relative;
+}
+/*资讯栏板块的2-7条内容左边的小方块*/
+.information-items2-7-left{
+  display:inline-block;
+  border:1px solid #bb9a6c;
+  color:#bb9a6c;
+  height:20px;
+  width:36px;
+  margin-top:0px;
+  font-size:13px;
+  text-align:center;
+  position:absolute;
+  margin-top:8px;
+  line-height:20px;
+}
+/*资讯栏板块的2-7条内容中间的字*/
+.information-items2-7-center{
+  display:inline-block;
+  position:absolute;
+  margin-left:57px;
+  text-decoration:none;
+  font-size:14px;
+  color:#424242;
+  width:370px;
+  height:39px;
+  line-height:39px;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}
+#information-content>ol:nth-child(1)>li:nth-child(2)>div:nth-child(1),#information-content>ol:nth-child(1)>li:nth-child(5)>div:nth-child(1),
+#information-content>ol:nth-child(1)>li:nth-child(7)>div:nth-child(1),
+#information-content>ol:nth-child(3)>li:nth-child(2)>div:nth-child(1),
+#information-content>ol:nth-child(3)>li:nth-child(3)>div:nth-child(1),
+#information-content>ol:nth-child(3)>li:nth-child(4)>div:nth-child(1),
+#information-content>ol:nth-child(3)>li:nth-child(5)>div:nth-child(1),
+#information-content>ol:nth-child(3)>li:nth-child(6)>div:nth-child(1){
+  color:#6388c5;
+  border:1px solid #6388c5;
+}
+#information-content>ol:nth-child(1)>li:nth-child(2):hover>a{
+  color:#6388c5;
+}
+#information-content>ol:nth-child(1)>li:nth-child(5):hover>a{
+  color:#6388c5;
+}
+#information-content>ol:nth-child(1)>li:nth-child(7):hover>a{
+  color:#6388c5;
+}
+#information-content>ol:nth-child(3)>li:nth-child(2):hover>a{
+  color:#6388c5;
+}
+#information-content>ol:nth-child(3)>li:nth-child(3):hover>a{
+  color:#6388c5;
+}
+#information-content>ol:nth-child(3)>li:nth-child(4):hover>a{
+  color:#6388c5;
+}
+#information-content>ol:nth-child(3)>li:nth-child(5):hover>a{
+  color:#6388c5;
+}
+#information-content>ol:nth-child(3)>li:nth-child(6):hover>a{
+  color:#6388c5;
+}
+#information-content>ol:nth-child(1)>li:nth-child(3)>div:nth-child(1),
+#information-content>ol:nth-child(1)>li:nth-child(4)>div:nth-child(1),
+#information-content>ol:nth-child(3)>li:nth-child(7)>div:nth-child(1),
+#information-content>ol:nth-child(5)>li:nth-child(4)>div:nth-child(1),
+#information-content>ol:nth-child(5)>li:nth-child(6)>div:nth-child(1){
+  color:#e9872d;
+  border:1px solid #e9872d;
+}
+
+#information-content>ol:nth-child(1)>li:nth-child(3):hover>a{
+  color:#e9872d;
+}
+#information-content>ol:nth-child(1)>li:nth-child(4):hover>a{
+  color:#e9872d;
+}
+#information-content>ol:nth-child(3)>li:nth-child(7):hover>a{
+  color:#e9872d;
+}
+#information-content>ol:nth-child(5)>li:nth-child(4):hover>a{
+  color:#e9872d;
+}
+#information-content>ol:nth-child(5)>li:nth-child(6):hover>a{
+  color:#e9872d;
+}
+#information-content>ol:nth-child(1)>li:nth-child(6)>div:nth-child(1),
+#information-content>ol:nth-child(5)>li:nth-child(2)>div:nth-child(1),
+#information-content>ol:nth-child(5)>li:nth-child(3)>div:nth-child(1),
+#information-content>ol:nth-child(5)>li:nth-child(5)>div:nth-child(1),
+#information-content>ol:nth-child(5)>li:nth-child(7)>div:nth-child(1){
+  color:#1da6ba;
+  border:1px solid #1da6ba;
+}
+#information-content>ol:nth-child(1)>li:nth-child(6):hover>a{
+  color:#1da6ba;
+}
+#information-content>ol:nth-child(5)>li:nth-child(2):hover>a{
+  color:#1da6ba;
+}
+#information-content>ol:nth-child(5)>li:nth-child(3):hover>a{
+  color:#1da6ba;
+}
+#information-content>ol:nth-child(5)>li:nth-child(5):hover>a{
+  color:#1da6ba;
+}
+#information-content>ol:nth-child(5)>li:nth-child(7):hover>a{
+  color:#1da6ba;
+}
+#information-content>ol:nth-child(2)>li:nth-child(1)~li:hover>a{
+  color:#bb956c;
+}
+#information-content>ol:nth-child(4)>li>div:nth-child(1){
+  color:#4ba36c;
+  border:1px solid #4ba36c;
+}
+#information-content>ol:nth-child(4)>li:nth-child(1)~li:hover>a{
+  color:#4ba36c;
+}
+/*资讯栏板块的2-7条内容右边的日期*/
+.information-items2-7-right{
+  position:absolute;
+  display:inline-block;
+  line-height:39px;
+  margin-left:432px;
+  padding-left:17px;
+  text-align:right;
+  color:#9d9d9d;
+  font-size:14px;
+  width:50px;
+  height:39px;
+}
+/*资讯栏下面的阅读更多最新资讯*/
+.information-bottom{
+  width:501px;
+  height:40px;
+  background-color:#e3e2e2;
+  margin-top:1px;
+}
+.information-bottom:hover{
+  cursor:pointer;
+  background-color:#d3d3d3;
+}
+/*资讯栏下面的阅读更多四个字*/
+.information-bottom>span{
+  height:40px;
+  line-height:40px;
+  margin-left:190px;
+  display:inline-block;
+  font-size:12px;
+}
+/*资讯栏下面的最新资讯四个字*/
+.information-bottom>a{
+  text-decoration:none;
+  display:inline-block;
+  margin-left:-4px;
+  font-size:12px;
+  color:#7ea1a6;
+  width:60px;
+}
+/*最新资讯右边的右箭头*/
+.information-bottom>a>div{
+  width:20px;
+  height:20px;
+  position:absolute;
+  display:inline-block;
+  margin-top:-3px;
+  background-image:url("../index_image/image/comm-spr.png");
+  background-position:94px 110px;
+  margin-left:2px;
+}
+/*最新资讯右边的右箭头的动画效果*/
+.information-bottom:hover>a>div{
+  animation:creation-right-arrow 1s;
+  animation-fill-mode:forwards;
+}
+@keyframes creation-right-arrow{
+  0%{margin-left:6px;}
+  10%{margin-left:0px;}
+  20%{margin-left:5px;}
+  30%{margin-left:0px;}
+  40%{margin-left:4px;}
+  50%{margin-left:0px;}
+  60%{margin-left:3px;}
+  70%{margin-left:0px;}
+  80%{margin-left:2px;}
+  90%{margin-left:1px;}
+  100%{margin-left:0px;}
+}

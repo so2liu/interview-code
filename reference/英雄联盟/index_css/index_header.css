@@ -1,0 +1,624 @@
+/*页面头部背景*/
+.header-gb{
+  width:100%;
+  min-width:1433px;
+  height:360px;
+  position:relative;
+  background-image:url("../index_image/image/02.jpg");
+  float:top;
+  background-size:100% 100%;
+}
+/*页面头部的顶部背景*/
+.header-top-bg{
+  width:100%;
+  height:80px;
+  min-width:1433px;
+  position:absolute;
+  background:linear-gradient(to top,rgba(0,0,0,0),rgba(0,0,0,0.2),rgba(0,0,0,0.3),rgba(0,0,0,0.7),rgba(0,0,0,0.9));
+}
+.header-top-items{
+  width:1358px;
+  height:auto;
+  margin:0 auto;
+  margin-top:-360px;
+}
+/*页面头部的logo*/
+.header-logo{
+  position:absolute;
+  margin-top:15px;
+  z-index:1000;
+}
+.header-items-shadow{
+  width:100%;
+  height:0px;
+  overflow:hidden;
+  min-width:1433px;
+  transition-property:margin-top,opacity;
+  transition-duration:0.5s;
+  opacity:0;
+  position:absolute;
+  margin-top:-100px;
+  background-color:rgba(0,0,0,0.7);
+  z-index:100;
+}
+/*页面头部的导航栏*/
+.header-navigation-bar{
+  height:70px;
+  width:800px;
+  margin-left:150px;
+}
+/*页面头部的导航栏的菜单选项*/
+.header-navigation-bar-items{
+  position:absolute;
+  margin-top:15px;
+  height:70px;
+  width:800px;
+  text-align:center;
+  z-index:1000;
+}
+/*页面头部的导航栏的菜单选项的第1个，第4个*/
+.header-navigation-bar-item01,.header-navigation-bar-item04{
+  list-style-type:none;
+  float:left;
+  height:30px;
+  line-height:30px;
+  width:160px;
+}
+/*页面头部的导航栏的菜单选项的菜单的选项的第1个，第4个*/
+.header-navigation-bar-item01>a,.header-navigation-bar-item04>a{
+  text-decoration:none;
+  color:white;
+  font-size:19px;
+}
+/*页面头部的导航栏的菜单选项的第2个，第3个，第5个*/
+.header-navigation-bar-item02,.header-navigation-bar-item03,.header-navigation-bar-item05{
+  list-style-type:none;
+  float:left;
+  height:30px;
+  line-height:30px;
+  width:160px;
+  color:white;
+  cursor:default;
+}
+.header-navigation-bar-item02>span,.header-navigation-bar-item03>span,.header-navigation-bar-item05>span{
+  color:white;
+  font-size:19px;
+}
+/*页面头部的导航栏的菜单选项的第6个，第9个*/
+.header-navigation-bar-item06,.header-navigation-bar-item09{
+  list-style-type:none;
+  float:left;
+  height:30px;
+  line-height:30px;
+  width:160px;
+  color:white;
+}
+/*页面头部的导航栏的菜单选项的菜单的选项的第6个，第9个*/
+.header-navigation-bar-item06>a,.header-navigation-bar-item09>a{
+  text-decoration:none;
+  color:white;
+  font-size:13px;
+}
+/*页面头部的导航栏的菜单选项的第7个，第8个，第10个*/
+.header-navigation-bar-item07,
+.header-navigation-bar-item08,
+.header-navigation-bar-item10{
+  float:left;
+  list-style-type:none;
+  color:white;
+  font-size:13px;
+  cursor:default;
+}
+/*页面头部的导航栏的菜单选项的菜单的选项的第7个，第8个，第10个*/
+.header-navigation-bar-item07>span,
+.header-navigation-bar-item08>span,
+.header-navigation-bar-item10>span{
+  float:left;
+  height:30px;
+  line-height:30px;
+  width:160px;
+  color:white;
+}
+/*导航栏下面隐藏的下拉菜单*/
+.header-navigation-hide-pull-down-list{
+  position:absolute;
+  width:800px;
+  height:255px;
+  opacity:1;
+  z-index:100;
+  transition-property:opacity,margin-top;
+  transition-duration:0.5s;
+  overflow:hidden;
+  list-style-type:none;
+  left:50%;
+  margin-left:-529px;
+  margin-top:90px;
+}
+/*导航栏下面隐藏的下拉菜单的各级菜单*/
+.header-navigation-hide-pull-down-list>li{
+  float:left;
+  width:160px;
+  height:30px;
+  text-align:center;
+}
+.header-navigation-hide-pull-down-list>li>a{
+  text-decoration:none;
+  color:#f5f5f5;
+  font-size:13px;
+  font-weight:300;
+  display:inline-block;
+  
+}
+.header-navigation-hide-pull-down-list>li>a:hover{
+  color:#ffd700;
+}
+.header-navigation-hide-pull-down-list>li:nth-child(4)>div{
+  margin-top:4px;
+  display:inline-block;
+  width:15px;
+  height:15px;
+  position:absolute;
+  margin-left:-1px;
+  background-image:url("../index_image/image/comm-spr-1.png");
+  background-position:15px -67px;
+  text-align:center;
+}
+.header-navigation-hide-pull-down-list>li:nth-child(7)>div{
+  margin-top:4px;
+  display:inline-block;
+  width:15px;
+  height:15px;
+  position:absolute;
+  margin-left:-1px;
+  background-image:url("../index_image/image/comm-spr-1.png");
+  background-position:15px -67px;
+  text-align:center;
+}
+.header-navigation-hide-pull-down-list>li:nth-child(10)>div{
+  margin-top:5px;
+  display:inline-block;
+  width:15px;
+  height:15px;
+  position:absolute;
+  margin-left:-1px;
+  background-image:url("../index_image/image/comm-spr-1.png");
+  background-position:155px -100px;
+  text-align:center;
+}
+.header-navigation-hide-pull-down-list>li:nth-child(11)>div{
+  margin-top:4px;
+  display:inline-block;
+  width:15px;
+  height:15px;
+  position:absolute;
+  margin-left:-1px;
+  background-image:url("../index_image/image/comm-spr-1.png");
+  background-position:15px -67px;
+  text-align:center;
+}
+.header-navigation-hide-pull-down-list>li:nth-child(15)>div{
+  margin-top:4px;
+  display:inline-block;
+  width:15px;
+  height:15px;
+  position:absolute;
+  margin-left:-1px;
+  background-image:url("../index_image/image/comm-spr-1.png");
+  background-position:15px -67px;
+  text-align:center;
+}
+.header-navigation-hide-pull-down-list>li:nth-child(32)>div{
+  margin-top:5px;
+  display:inline-block;
+  width:15px;
+  height:15px;
+  position:absolute;
+  margin-left:-1px;
+  background-image:url("../index_image/image/comm-spr-1.png");
+  background-position:155px -100px;
+  text-align:center;
+}
+.header-navigation-hide-pull-down-list>li:nth-child(33)>div{
+  margin-top:5px;
+  display:inline-block;
+  width:15px;
+  height:15px;
+  position:absolute;
+  margin-left:-1px;
+  background-image:url("../index_image/image/comm-spr-1.png");
+  background-position:155px -100px;
+  text-align:center;
+}
+.header-navigation-hide-pull-down-list>li:nth-child(36)>div{
+  margin-top:5px;
+  display:inline-block;
+  width:15px;
+  height:15px;
+  position:absolute;
+  margin-left:-1px;
+  background-image:url("../index_image/image/comm-spr-1.png");
+  background-position:155px -100px;
+  text-align:center;
+}
+/*搜索框(页面上的放大镜)*/
+.header-search-box{
+  position:absolute;
+  margin-top:-40px;
+  margin-left:960px;
+  width:25px;
+  height:40px;
+  z-index:2000;
+}
+/*放大镜的圈*/
+.header-search-box-magnifying-glass:after{
+  content:"";
+  display:inline-block;
+  width:16px;
+  height:16px;
+  border:2px solid rgb(205,190,145);
+  border-radius:50%;
+  position:absolute;
+}
+/*放大镜的柄*/
+.header-search-box-magnifying-glass:before{
+  content:"";
+  display:inline-block;
+  background-color:rgb(205,190,145);
+  width:9px;
+  height:2px;
+  transform:rotate(45deg);
+  padding-left:0px;
+  position:absolute;
+  top:18px;
+  left:14px;
+  border-radius:2px;
+}
+.hid-search{
+  width:100%;
+  height:80px;
+  background-color:black;
+  position:absolute;;
+  z-index:1500;
+  margin-top:-70px;
+  display:none;
+  min-width:1358px;
+}
+.hid-search-left{
+  width:25px;
+  height:25px;
+  margin-top:27px;
+  position:absolute;
+  background-image:url("../index_image/image/comm-spr-1.png");
+  background-position:-213px -138px;
+  margin-left:520px;
+}
+.hid-search-left:hover{
+  cursor:pointer;
+}
+.hid-search-form{
+  width:1358px;
+  height:80px;
+  position:absolute;
+  left:50%;
+  margin-left:-679px;
+}
+.hid-search-input{
+  width:400px;
+  height:79px;
+  background-color:black;
+  font-size:23px;
+  color:#f5f5f5;
+  border:none;
+  margin-left:550px;
+  outline:none;
+}
+/*页面上的小手机栏*/
+.header-cellphone-plate{
+  position:absolute;
+  margin-top:-40px;
+  margin-left:1020px;
+  z-index:1000;
+  height:26px;
+  width:16px;
+}
+/*页面上的小手机*/
+.header-cellphone{
+  width:16px;
+  height:26px;
+  background-image:url("../index_image/image/comm-spr-1.png");
+  background-position:-385px -38px;
+}
+.header-cellphone>a{
+  width:16px;
+  height:26px;
+  display:block;
+}
+.header-hid-OR-code{
+  width:190px;
+  height:0px;
+  background-image:url("../index_image/image/comm-spr-1.png");
+  margin-left:-88px;
+  margin-top:-10px;
+  background-position:-10px 0px;
+  opacity:0;
+  transition-property:opacity,margin-top;
+  transition-duration:0.5s;
+  overflow:hidden;
+}
+/*隐藏的掌盟二维码*/
+.header-cellphone-plate:hover>.header-hid-OR-code{
+  height:170px;
+  opacity:1;
+  margin-top:10px;
+}
+.header-hid-OR-code>li{
+  list-style-type:none;
+}
+/*隐藏的二维码图片*/
+.header-hid-OR-code>li:nth-child(1){
+  width:110px;
+  height:110px;
+  text-align:center;
+  margin-top:25px;
+  background:#fff;
+  margin-left:41px;
+  border-radius:10px;
+}
+.header-hid-OR-code>li:nth-child(1)>img{
+  margin-top:7px;
+}
+.header-hid-OR-code>li:nth-child(2){
+  margin-top:5px;
+}
+/*隐藏的扫码下载掌上英雄联盟这行字*/
+.header-hid-OR-code>li:nth-child(2)>div:nth-child(1){
+  display:block;
+  width:120px;
+  height:30px;
+  text-align:center;
+  color:#ffd700;
+  font-size:10px;
+  font-weight:300;
+  line-height:30px;
+  margin-left:35px;
+}
+.header-hid-OR-code>li:nth-child(2)>div:nth-child(2){
+  background-image:url("../index_image/image/polo.gif");
+  width:30px;
+  height:30px;
+  background-size:100%;
+  margin-left:158px;
+  margin-top:-32px;
+}
+/*登录导航栏*/
+.header-information-bar{
+  position:absolute;
+  width:200px;
+  height:50px;
+  margin-top:-60px;
+  margin-left:1080px;
+  z-index:1000;
+}
+.header-information-bar-show{
+  z-index:1000;
+  position:absolute;
+}
+.header-information-bar>ul>li{
+  list-style-type:none;
+}
+.header-information-bar>ul>li>ul>li{
+  list-style-type:none;
+}
+/*登录导航栏的人头外面的圈*/
+.header-information-bar-head-portrait{
+  float:left;
+  margin-top:4px;
+  width:50px;
+  height:50px;
+  border:2px solid rgb(205,190,145);
+  border-radius:50%;
+  overflow:hidden;
+}
+/*登录导航栏的人头上面的角*/
+.header-information-bar-head-portrait>div{
+  border-right:2px solid rgb(205,190,145);
+  border-bottom:2px solid rgb(205,190,145);
+  background-color:rgb(3,15,23);
+  width:6px;
+  height:6px;
+  position:absolute;
+  margin-top:-4.5px;
+  margin-left:21px;
+  transform:rotate3d(0,0,1,45deg)
+}
+.header-information-bar-head-portrait>img{
+  transform:scale(0.6);
+  border-radius:50%;
+  margin-top:-8px;
+  margin-left:-8px;
+}
+.header-information-bar-show>ul>li:nth-child(2){
+  width:150px;
+  position:absolute;
+  margin-top:5px;
+  margin-left:55px;
+  float:left;
+  height:50px;
+  line-height:50px;
+  color:white;
+}
+.header-information-bar-show>ul>li:nth-child(3){
+  width:40px;
+  position:absolute;
+  float:left;
+  margin-top:5px;
+  margin-left:200px;
+  height:50px;
+  line-height:50px;
+}
+.header-information-bar-show>ul>li:nth-child(3)>a{text-decoration:none;
+  color:#f0e68c;
+}
+/*登录导航栏的隐藏下拉菜单*/
+.header-information-bar>ul>.header-information-bar-hid{
+  position:absolute;
+  z-index:100;
+  background-color:rgba(0,0,0,0.6);
+  width:278px;
+  height:0px;
+  overflow:hidden;
+  transition-property:opacity,margin-top;
+  transition-duration:0.5s;
+  opacity:1;
+  margin-top:-30px;
+}
+.header-information-bar:hover>ul>.header-information-bar-hid{
+  opacity:1;
+  height:240px;
+  margin-top:0px;
+}
+.header-information-bar-hid>ul{
+  height:200px;
+  margin-top:50px;
+  width:278px;
+  position:absolute;
+}
+.header-information-bar-hid>ul>li:nth-child(1){
+  margin-top:40px;
+  color:#f5f5f5;
+  font-size:12px;
+  font-weight:300;
+  height:30px;
+  line-height:30px;
+  text-align:center;
+  width:278px;
+}
+.header-information-bar-hid>ul>li:nth-child(2){
+  width:278px;
+  color:#f5f5f5;
+  font-size:10px;
+  font-weight:300;
+  height:30px;
+  line-height:15px;
+  text-align:center;
+}
+.header-information-bar-hid>ul>li:nth-child(3){
+  width:278px;
+  color:#f5f5f5;
+  font-size:10px;
+  font-weight:300;
+  height:30px;
+  line-height:30px;
+  text-align:center;
+}
+.header-information-bar-hid>ul>li:nth-child(4){
+  margin-top:10px;
+  height:50px;
+  background-color:black;
+  text-align:center;
+  line-height:50px;
+  width:278px;
+}
+.header-information-bar-hid>ul>li:nth-child(4)>a{
+  text-decoration:none;
+  color:white;
+  display:inline-block;
+  width:110px;
+}
+.header-information-bar-hid>ul>li:nth-child(4)>a:hover{
+  color:#f0e68c;
+}
+/*进入个人中心的右边的箭头*/
+.header-information-bar-hid>ul>li:nth-child(4)>a>div{
+  width:20px;
+  height:20px;
+  position:absolute;
+  display:inline-block;
+  margin-top:15px;
+  margin-left:2px;
+  background-image:url("../index_image/image/comm-spr.png");
+  background-position:35px 160px;
+}
+/*进入个人中心的右边的箭头的动画效果*/
+.header-information-bar-hid>ul>li:nth-child(4)>a:hover>div{
+  animation:creation-right-arrow 1s;
+  animation-fill-mode:forwards;
+}
+@keyframes creation-right-arrow{
+  0%{margin-left:6px;}
+  10%{margin-left:0px;}
+  20%{margin-left:5px;}
+  30%{margin-left:0px;}
+  40%{margin-left:4px;}
+  50%{margin-left:0px;}
+  60%{margin-left:3px;}
+  70%{margin-left:0px;}
+  80%{margin-left:2px;}
+  90%{margin-left:1px;}
+  100%{margin-left:0px;}
+}
+.header-bottom-items{
+  width:1358px;
+  height:60px;
+  margin:0 auto;
+  margin-top:220px;
+  z-index:10;
+}
+/*查看详情框*/
+.header-details{
+  position:absolute;
+  margin-left:598.5px;
+  background-color:rgba(0,0,0,0.4);
+  border:1px solid #ffd700;
+  width:160px;
+  height:40px;
+  line-height:40px;
+  text-align:center;
+}
+.header-details>a{
+  text-decoration:none;
+  color:#daa520;
+  font-size:15px;
+  font-weight:300;
+  display:block;
+}
+/*当前游戏版本框*/
+.header-version{
+  position:absolute;
+  margin-top:25px;
+  margin-left:1070px;
+  width:100px;
+  height:22px;
+}
+.header-version>span{
+  color:#778899;
+  font-weight:300;
+}
+/*版本号框*/
+.header-version-number{
+  position:absolute;
+  margin-top:25px;
+  margin-left:1180px;
+}
+.header-version-number>span{
+  color:#daa520;
+}
+/*版本详情框*/
+.header-version-details{
+  position:absolute;
+  margin-top:22px;
+  margin-left:1260px;
+  background-color:rgba(0,0,0,0.4);
+  border:1px solid #daa520;
+  width:82px;
+  height:26px;
+  line-height:26px;
+  text-align:center;
+}
+.header-version-details>a{
+  text-decoration:none;
+  color:#daa520;
+  font-size:14px;
+  font-weight:300;
+  display:block;
+}

@@ -1,0 +1,493 @@
+/*创作栏板块和用户调查板块*/
+.players-center-gb{
+  width:1358px;
+  height:572px;
+  position:relative;
+  margin:0 auto;
+}
+/*创作馆板块*/
+.creation-plate-gb{
+  width:820px;
+  height:470px;
+  margin-top:50px;
+  position:absolute;
+}
+/*创作馆板块左边的竖线*/
+.creation-rectangle{
+  width:4px;
+  height:28px;
+  background-color:#1da6ba;
+  margin-right:10px;
+  position:absolute;
+  margin-left:-5px;
+  margin-top:17px;
+}
+/*创作馆名字*/
+.creation-name>span{
+  width:200px;
+  height:35px;
+  font-size:23px;
+  line-height:35px;
+  padding-left:15px;
+  position:absolute;
+  display:inline-block;
+  margin-top:12px;
+}
+/*创作馆中间的更多*/
+.creation-name>a{
+  display:inline-block;
+  position:absolute;
+  text-decoration:none;
+  margin-left:778px;
+  width:50px;
+  margin-top:20px;
+  color:#7ea1a6;
+  font-size:12px;
+}
+.creation-name>a:hover{
+  color:#1da6ba;
+  font-weight:600;
+  text-decoration:underline;
+}
+/*创作馆中间的更多右边的向右箭头*/
+.creation-name>a>div{
+  background-image:url("../index_image/image/comm-spr.png");
+  display:inline-block;
+  width:20px;
+  height:20px;
+  position:absolute;
+  background-position:95px 109px;
+  margin-top:-1px;
+}
+/*创作馆中间的更多右边的向右箭头的动画效果*/
+.creation-name:hover>a>div{
+  animation:creation-right-arrow 1s;
+  animation-fill-mode:forwards;
+}
+@keyframes creation-right-arrow{
+  0%{margin-left:6px;}
+  10%{margin-left:0px;}
+  20%{margin-left:5px;}
+  30%{margin-left:0px;}
+  40%{margin-left:4px;}
+  50%{margin-left:0px;}
+  60%{margin-left:3px;}
+  70%{margin-left:0px;}
+  80%{margin-left:2px;}
+  90%{margin-left:1px;}
+  100%{margin-left:0px;}
+}
+/*创作栏的横向的第一行4张图片*/
+.creation-imgs1-4{
+  display:flex;
+  width:820px;
+  height:185px;
+  margin:0px;
+  padding:0px;
+  margin-top:60px;
+  position:absolute;
+}
+/*创作栏的横向的第一行4张图片的每一个图片*/
+.creation-imgs1-4>li{
+  list-style:none;
+  transform:scale(0.87);
+  background-size:87% 87%;
+  position:absolute;
+  width:218px;
+  height:200px;
+  overflow:hidden;
+  padding:0px;
+  margin-top:-7px;
+}
+/*创作栏的横向的第一行4张图片的每一个图片上面的遮罩层*/
+.creation-imgs1-4>li>div{
+  width:218px;
+  height:200px;
+  position:absolute;
+}
+/*创作栏的横向的第二行4张图片的每一个图片上面的遮罩层*/
+.creation-imgs5-8>li>div{
+  width:218px;
+  height:200px;
+  position:absolute;
+}
+/*创作栏的横向的第一行4张图片的第1张*/
+.creation-imgs01{
+  width:217px;
+  height:200px;
+  margin-left:-5px;
+}
+/*创作栏的横向的第一行4张图片的第2张*/
+.creation-imgs02{
+  width:217px;
+  height:200px;
+  margin-left:202px;
+}
+/*创作栏的横向的第一行3张图片的第3张*/
+.creation-imgs03{
+  width:217px;
+  height:200px;
+  margin-left:409px;
+}
+/*创作栏的横向的第一行4张图片的第4张*/
+.creation-imgs04{
+  width:217px;
+  height:200px;
+  margin-left:616px;
+}
+/*创作栏的横向的第二行4张图片*/
+.creation-imgs5-8{
+  width:820px;
+  height:185px;
+  margin-top:251px;
+}
+/*创作栏的横向的第二行4张图片的每一张图片*/
+.creation-imgs5-8>li{
+  list-style:none;
+  transform:scale(0.87);
+  background-size:87% 87%;
+  position:absolute;
+  width:218px;
+  height:200px;
+  overflow:hidden;
+  padding:0px;
+  margin-top:-7px;
+}
+/*创作栏的横向的第二行4张图片的第1张图片*/
+.creation-imgs05{
+  width:217px;
+  height:200px;
+  margin-left:-5px;
+}
+/*创作栏的横向的第二行4张图片的第2张图片*/
+.creation-imgs06{
+  width:217px;
+  height:200px;
+  margin-left:202px;
+}
+/*创作栏的横向的第二行4张图片的第3张图片*/
+.creation-imgs07{
+  width:217px;
+  height:200px;
+  margin-left:409px;
+}
+/*创作栏的横向的第二行4张图片的第4张图片*/
+.creation-imgs08{
+  width:217px;
+  height:200px;
+  margin-left:616px;
+}
+/*鼠标滑动时图片按比例放大*/
+.creation-imgs1-4>li>div:hover>a>div>img{
+  transform:scale(1.3);
+  transition:all 0.5s;
+}
+.creation-imgs5-8>li>div:hover>a>div>img{
+  transform:scale(1.3);
+  transition:all 0.5s;
+}
+/*第1行的四张图片上面的遮罩层*/
+.creation-imgs1-4>li>a>div{
+  position:absolute;
+}
+/*第2行的四张图片上面的遮罩层*/
+.creation-imgs5-8>li>a>div{
+  position:absolute;
+}
+/*鼠标到图片上面时显示阴影*/
+.creation-imgs1-4>li>div:hover>a>.creation-imgs01-hid-shadow{
+  margin-top:130px;
+}
+.creation-imgs5-8>li>div:hover>a>.creation-imgs01-hid-shadow{
+  margin-top:130px;
+}
+/*图片上面的隐藏阴影*/
+.creation-imgs01-hid-shadow{
+  width:218px;
+  height:70px;
+  margin-top:200px;
+  background-color:rgba(0,0,0,0.7);
+  position:absolute;
+  top:0px;
+  transition:all 0.25s;
+}
+/*图片上面的隐藏阴影的上一行字*/
+.creation-imgs01-hid-top{
+  color:#f5f5f5;
+  height:35px;
+  width:205px;
+  line-height:35px;
+  font-size:15px;
+  font-weight:600;
+  padding-left:20px;
+}
+/*图片上面的隐藏阴影的下一半*/
+.creation-imgs01-hid-name-head-portrait{
+  display:inline-block;
+  position:absolute;
+  margin-left:10px;
+}
+/*图片上面的隐藏阴影的下一半的左边的头像*/
+.creation-imgs01-hid-name-head-portrait>img{
+  border-radius:50%;
+  width:30px;
+  height:30px;
+}
+/*图片上面的隐藏阴影的下一半的中间的名字*/
+.creation-imgs01-hid-name{
+  margin-top:0px;
+  display:inline-block;
+  color:#f5f5f5;
+  height:35px;
+  line-height:30px;
+  width:105px;
+  margin-left:50px;
+  position:absolute;
+  font-size:14px;
+}
+/*图片上面的隐藏阴影的下一半的右边的手(点赞)*/
+.creation-imgs01-hid-great{
+  display:inline-block;
+  width:30px;
+  height:22px;
+  margin-top:5px;
+  margin-left:160px;
+  background-image:url("../index_image/image/index-spr.png");
+  background-position:185px 350px;
+}
+/*变成蓝色的手*/
+.creation-imgs01-hid-great:hover{
+  background-image:url("../index_image/image/index-spr.png");
+  background-position:213px 350px;
+}
+.creation-imgs01-hid-great-count{
+  color:#f5f5f5;
+  margin-left:188px;
+  position:absolute;
+  margin-top:-24px;
+  font-size:14px;
+}
+/*创作栏板块右边的用户调查板块*/
+.user-survey{
+  width:496px;
+  height:470px;
+  margin-left:860px;
+  position:absolute;
+  margin-top:50px;
+}
+/*用户调查板块的左边的大图*/
+.user-surver01{
+  float:left;
+}
+.user-surver01>a>img{
+  margin-top:20px;
+  transition:all 0.25s;
+}
+.user-surver01:hover>a>img{
+  margin-top:-10px;
+}
+/*用户调查板块的右边的纵向显示的3张图片*/
+.user-surver2-4{
+  width:241px;
+  float:left;
+  margin-left:254px;
+  margin-top:63px;
+  position:absolute;
+}
+/*用户调查板块的右边的纵向显示的3张图片的每张图片*/
+.user-surver2-4>div{
+  background-size:100% 100%;
+  position:relative;
+}
+/*用户调查板块的右边的纵向显示的3张图片的第2张图片*/
+.user-surver03{
+  margin-top:102px;
+}
+/*用户调查板块的右边的纵向显示的3张图片的第3张图片*/
+.user-surver04{
+  margin-top:204px;
+}
+/*用户调查板块的右边的纵向显示的3张图片的第3张图片*/
+.user-surver04>a>img{
+  background-size:101% 100%;
+  width:241px;
+  height:87px;
+}
+/*用户调查板块的右边的纵向显示的3张图片的所有图片*/
+.user-surver2-4-img{
+  position:absolute;
+}
+/*用户调查板块的右边的纵向显示的3张图片的所有图片上面的遮罩层*/
+.user-surver2-4-name{
+  position:absolute;
+  top:0px;
+  left:0px;
+  width:241px;
+  height:87px;
+}
+/*遮罩层增加透明色*/
+.user-surver2-4-name:hover{
+  background-color:rgba(0,0,0,0.1);
+}
+/*图片上面遮罩层的左边的空心菱形*/
+.user-surver2-4-name>div:nth-child(1){
+  width:11px;
+  height:11px;
+  border:1px solid #808080;
+  float:left;
+  margin-top:38px;
+  margin-left:20px;
+  transform:rotate3d(0,0,1,45deg);
+}
+/*图片上面遮罩层的左边的实心菱形*/
+.user-surver2-4-name>div:nth-child(2){
+  width:5px;
+  height:5px;
+  float:left;
+  background-color:#f5f5f5;
+  margin-top:42px;
+  margin-left:-9px;
+  transform:rotate3d(0,0,1,45deg);
+}
+/*图片上面遮罩层的上面的一行字*/
+.user-surver2-4-name>div:nth-child(3){
+  color:#f5f5f5;
+  display:block;
+  font-size:14px;
+  float:left;
+  height:20px;
+  margin-top:34px;
+  margin-left:15px;
+}
+/*合作媒体板块*/
+.media-partners{
+  position:relative;
+  margin-top:370px;
+  margin-left:254px;
+}
+/*合作媒体板块上面的背景色*/
+.media-partners>a>div:nth-child(1){
+  position:absolute;
+  top:0px;
+  right:0px;
+  width:241px;
+  height:61px;
+  background-image:url("../index_image/image/index-spr.png");
+  background-position:-192px 321px;
+}
+/*合作媒体板块上面的遮罩层*/
+.media-partners>a>div:nth-child(2){
+  position:absolute;
+  top:0px;
+  right:0px;
+  width:241px;
+  height:61px;
+  z-index:1000;
+}
+/*合作媒体板块上面的遮罩层上面的东西*/
+.media-partners>a>div:nth-child(2)>div{
+  float:left;
+}
+/*合作媒体板块上面的遮罩层上面的左边的横线*/
+.media-partners>a>div:nth-child(2)>div:nth-child(1){
+  background-color:#f5f5f5;
+  width:15px;
+  height:1px;
+  margin-top:30px;
+  margin-left:45px;
+}
+/*合作媒体板块上面的遮罩层上面的左边的空心菱形*/
+.media-partners>a>div:nth-child(2)>div:nth-child(2){
+  border:1px solid #f5f5f5;
+  width:6px;
+  height:6px;
+  margin-top:26.5px;
+  transform:rotate3d(0,0,1,45deg);
+}
+/*合作媒体板块上面的遮罩层上面的合作媒体四个字*/
+.media-partners>a>div:nth-child(2)>div:nth-child(3){
+  color:#f5f5f5;
+  font-size:14px;
+  width:60px;
+  height:18px;
+  margin-top:21px;
+  margin-left:10px;
+}
+/*合作媒体板块上面的遮罩层上面的合作媒体四个字的右边的箭头*/
+.media-partners>a>div:nth-child(2)>div:nth-child(4){
+  background-image:url("../index_image/image/comm-spr.png");
+  width:20px;
+  height:20px;
+  margin-top:19px;
+  background-position:33px 162px;
+}
+/*合作媒体板块上面的遮罩层上面的合作媒体四个字的右边的箭头的动画效果*/
+.media-partners:hover>a>div:nth-child(2)>div:nth-child(4){
+  animation:creation-right-arrow 1s;
+  animation-fill-mode:forwards;
+}
+/*合作媒体板块上面的遮罩层上面的右边的空心菱形*/
+.media-partners>a>div:nth-child(2)>div:nth-child(5){
+  border:1px solid #f5f5f5;
+  width:6px;
+  height:6px;
+  margin-top:27px;
+  transform:rotate3d(0,0,1,45deg);
+  margin-left:10px;
+  position:absolute;
+  margin-left:170px;
+}
+/*合作媒体板块上面的遮罩层上面的右边的横线*/
+.media-partners>a>div:nth-child(2)>div:nth-child(6){
+  background-color:#f5f5f5;
+  width:15px;
+  height:1px;
+  margin-top:30px;
+  position:absolute;
+  margin-left:179px;
+}
+/*合作媒体下面隐藏的媒体名字*/
+.media-partners-hid-name{
+  background-color:#f5f5f5;
+  width:237px;
+  height:0px;
+  position:absolute;
+  margin-top:46px;
+  margin-left:2px;
+  z-index:100;
+  opacity:0;
+  overflow:auto;
+  transition-property:opacity,margin-top;
+  transition-duration:0.5s;
+}
+.media-partners:hover>.media-partners-hid-name{
+  opacity:1;
+  border:1px solid #d3d3d3;
+  margin-top:60px;
+  height:245px;
+}
+/*合作媒体下面隐藏的每个媒体名字所在的行*/
+.media-partners-hid-name>li{
+  list-style:none;
+  height:30px;
+  line-height:30px;
+}
+.media-partners-hid-name>li:hover{
+  background-color:#d3d3d3;
+}
+/*合作媒体下面隐藏的每个媒体的名字*/
+.media-partners-hid-name>li>a{
+  text-decoration:none;
+  color:#696969;
+  font-size:12px;
+  margin-left:20px;
+  display:block;
+}
+.media-partners-hid-name::-webkit-scrollbar{
+  background-color:#dcdcdc;
+  width:8px;
+}
+.media-partners-hid-name::-webkit-scrollbar-thumb{
+  background-color:#92a8a8;
+  border-radius:10px;
+}

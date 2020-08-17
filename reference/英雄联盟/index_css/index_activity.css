@@ -1,0 +1,1090 @@
+/*热门活动与游戏下载板块*/
+.activity-plate-gb{
+  width:1358px;
+  height:660px;
+  margin:0 auto;
+}
+/*热门活动板块*/
+.activity-plate{
+  width:820px;
+  height:345px;
+  margin-top:10px;
+  position:absolute;
+}
+/*热门活动四个字旁边的竖线*/
+.activity-orthogon{
+  display:inline-block;
+  width:4px;
+  height:28px;
+  background-color:#1da6ba;
+  margin-right:10px;
+  position:absolute;
+  margin-left:-10px;
+  margin-top:17px;
+}
+/*热门活动四个字*/
+.activity-name{
+  color:black;
+  display:inline-block;
+  font-size:23px;
+  margin-left:10px;
+  margin-top:15px;
+}
+/*活动种类*/
+.activity-type{
+  display:inline-block;
+  position:absolute;
+  margin-top:-32px;
+  margin-left:128px;
+  width:692px;
+  height:35px;
+  border-bottom:1px solid #d3d3d3;
+}
+/*每个活动种类*/
+.activity-type>li{
+  display:inline-block;
+  list-style-type:none;
+  width:100px;
+  height:37px;
+  line-height:37px;
+  position:relative;
+}
+.activity-type>li>div>a{
+  text-decoration:none;
+  color:black;
+  font-size:16px;
+  transition:all 0.25s;
+  display:block;
+}
+/*每个活动种类下面的两个矩形和菱形*/
+.activity-orthogon-rhombus{
+  position:relative;
+  background-color:#f5f5f5;
+  width:65px;
+  height:10px;
+  margin-top:-7px;
+  opacity:0;
+  background-image:url(../index_image/image/comm-spr.png);
+  background-position:132px 201px;
+}
+.activity-types:hover>.activity-orthogon-rhombus{
+  animation:orthogon-rhombus 0.5s;
+  animation-fill-mode:forwards;
+}
+@keyframes orthogon-rhombus{
+  0%{opacity:0;transform:scale(0.8)}
+  100%{opacity:1;transform:scale(1)}
+}
+/*鼠标在每个活动种类上时*/
+.activity-types:hover a{
+  color:#1da6ba;
+  font-weight:600;
+}
+.activity-type .n>.activity-orthogon-rhombus{
+  opacity:1;
+}
+.activity-type .n a{
+  color:#1da6ba;
+  font-weight:600;
+}
+/*热门活动右边的更多*/
+.activity-more{
+  position:absolute;
+  margin-left:645px;
+  margin-top:-25px;
+}
+.activity-more>a{
+  text-decoration:none;
+  font-size:12px;
+  color:#7ea1a6;
+  position:absolute;
+  display:inline-block;
+  width:30px;
+}
+.activity-more>a:hover{
+  color:#1da6ba;
+  font-weight:600;
+  text-decoration:underline;
+}
+/*热门活动右边的更多右边的箭头*/
+.activity-more>a>div{
+  background-image:url("../index_image/image/comm-spr.png");
+  display:inline-block;
+  width:20px;
+  height:20px;
+  position:absolute;
+  background-position:95px 108px;
+  margin-top:-1px;
+}
+/*热门活动右边的更多右边的箭头动画效果*/
+.activity-more>a:hover>div{
+  animation:creation-right-arrow 1s;
+  animation-fill-mode:forwards;
+}
+@keyframes creation-right-arrow{
+  0%{margin-left:6px;}
+  10%{margin-left:0px;}
+  20%{margin-left:5px;}
+  30%{margin-left:0px;}
+  40%{margin-left:4px;}
+  50%{margin-left:0px;}
+  60%{margin-left:3px;}
+  70%{margin-left:0px;}
+  80%{margin-left:2px;}
+  90%{margin-left:1px;}
+  100%{margin-left:0px;}
+}
+/*活动类型板块(包含3个)*/
+.activity-details{
+  width:820px;
+  height:279px;
+  margin-top:20px;
+  position:absolute;
+  display:none;
+}
+/*每个活动的详细介绍*/
+.activity-details>li{
+  list-style:none;
+  height:278px;
+  width:193px;
+  float:left;
+  margin-left:16px;
+  transition:all 0.25s;
+}
+.activity-details>li:hover{
+  margin-top:-10px;
+}
+.activity-details>li>a{
+  text-decoration:none;
+}
+.activity-details-imgs{
+  position:absolute;
+}
+/*每个活动的详细介绍上隐藏的阴影*/
+.activity-details-hid-shadow{
+  position:absolute;
+  background-color:rgba(0,0,0,0.7);
+  width:193px;
+  height:206px;
+  background-image:url("../index_image/image/comm-spr.png");
+  background-position:2px 2.5px;
+  background-repeat:no-repeat;
+  opacity:0;
+  transition:all 0.25s;
+}
+.activity-details>li:hover .activity-details-hid-shadow{
+  opacity:1;
+}
+/*每个活动的详细介绍上隐藏的阴影上面的第一行字*/
+.activity-details-hid-shadow>div:nth-child(1){
+  color:rgb(205,190,145);
+  text-align:center;
+  font-size:15px;
+  margin-top:40px;
+}
+/*每个活动的详细介绍上隐藏的阴影上面的中间的字*/
+.activity-details-hid-shadow>div:nth-child(2){
+  color:#a9a9a9;
+  font-size:12px;
+  text-align:center;
+  width:160px;
+  margin-top:10px;
+  margin-left:15px;
+  line-height:18px;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+/*每个活动的详细介绍上隐藏的阴影上面的下面的字*/
+.activity-details-hid-shadow>div:nth-child(3){
+  color:#a9a9a9;
+  font-size:12px;
+  text-align:center;
+  height:40px;
+  margin-top:5px;
+}
+/*活动图片下面的活动详细介绍*/
+.activity-details>li>a>div:nth-child(2){
+  width:193px;
+  height:72px;
+  margin-top:206px;
+  background-color:#fff;
+  position:absolute;
+}
+/*活动图片下面的活动名称*/
+.activity-details>li>a>div:nth-child(2)>div:nth-child(1){
+  width:183px;
+  height:36px;
+  line-height:36px;
+  color:#000000;
+  font-size:14px;
+  margin-left:10px;
+}
+.activity-details>li:hover>a>div:nth-child(2)>div:nth-child(1){
+  color:#1da6ba;
+}
+/*活动图片下面的活动名称下面的状态*/
+.activity-details>li>a>div:nth-child(2)>div:nth-child(2){
+  width:183px;
+  height:36px;
+  line-height:36px;
+  font-size:13px;
+}
+/*活动图片下面的活动名称下面的状态和new*/
+.activity-details>li>a>div:nth-child(2)>div:nth-child(2)>div{
+  float:left;
+  margin-left:10px;
+}
+/*活动现在的状态*/
+.activity-details>li>a>div:nth-child(2)>div:nth-child(2)>div:nth-child(1){
+  color:#1da6ba;
+  width:120px;
+}
+/*活动详情图片下面的new*/
+.activity-details>li>a>div:nth-child(2)>div:nth-child(2)>div:nth-child(2){
+  width:31px;
+  height:16px;
+  margin-top:7px;
+  background-image:url("../index_image/image/comm-spr-1.png");
+  background-position:190px -99px;
+}
+/*新英雄和新皮肤版块*/
+.new-hero-skin{
+  width:820px;
+  height:254px;
+  position:absolute;
+  margin-top:400px;
+  float:left;
+  z-index:1000;
+}
+/*新英雄板块*/
+.new-hero{
+  width:402px;
+  height:254px;
+  float:left;
+}
+/*新英雄板块的图片*/
+.new-hero>div:nth-child(1){
+  position:absolute;
+}
+/*新英雄图片上隐藏的阴影*/
+.new-hero-hid{
+  position:absolute;
+  height:254px;
+  width:402px;
+  background-color:rgba(0,0,0,0.7);
+  color:#fff;
+  background-image:url("../index_image/image/index-spr.png");
+  background-position:2px 3px;
+  opacity:0;
+  transition:all 0.25s linear;
+  margin-top:5px;
+}
+.new-hero:hover>.new-hero-hid{
+  opacity:1;
+  margin-top:0px;
+}
+/*新英雄上图片上隐藏的名字*/
+.new-hero-hid>div:nth-child(1){
+  color:rgb(205,190,145);
+  position:absolute;
+  margin-top:25px;
+  margin-left:32px;
+}
+/*新英雄上图片上隐藏的难度*/
+.new-hero-hid-dif{
+  color:#fff;
+  font-size:14px;
+  width:150px;
+  height:20px;
+  position:absolute;
+  margin-top:65px;
+  margin-left:32px;
+}
+/*新英雄上图片上隐藏的难度的每个小格子*/
+.new-hero-hid-dif>div:nth-child(1){
+  width:50px;
+  float:left;
+}
+/*新英雄上图片上隐藏的难度的第1个小格子*/
+.new-hero-hid-dif>div:nth-child(2){
+  background:#fff;
+  width:32px;
+  height:5px;
+  float:left;
+  margin-top:8px;
+}
+/*新英雄上图片上隐藏的难度的第2个小格子*/
+.new-hero-hid-dif>div:nth-child(3){
+  background:#fff;
+  width:32px;
+  height:5px;
+  float:left;
+  margin-left:2px;
+  margin-top:8px;
+}
+/*新英雄上图片上隐藏的难度的第3个小格子*/
+.new-hero-hid-dif>div:nth-child(4){
+  background:#696969;
+  width:32px;
+  height:5px;
+  float:left;
+  margin-left:2px;
+  margin-top:8px;
+}
+/*新英雄上图片上隐藏的物理攻击*/
+.new-hero-hid-p-a{
+  color:#fff;
+  font-size:14px;
+  width:150px;
+  height:20px;
+  position:absolute;
+  margin-top:65px;
+  margin-left:220px;
+}
+.new-hero-hid-p-a>div:nth-child(1){
+  display:inline-block;
+}
+.new-hero-hid-p-a>div:nth-child(2){
+  background-color:#696969;
+  width:82px;
+  height:5px;
+  display:inline-block;
+  position:absolute;
+  margin-top:8px;
+}
+.new-hero-hid-p-a>div:nth-child(2)>div{
+  width:0px;
+  height:5px;
+  background-color:#fff;
+}
+/*新英雄上图片上隐藏的防御能力*/
+.new-hero-hid-d{
+  color:#fff;
+  font-size:14px;
+  width:150px;
+  height:20px;
+  position:absolute;
+  margin-top:100px;
+  margin-left:32px;
+}
+.new-hero-hid-d>div:nth-child(1){
+  display:inline-block;
+}
+.new-hero-hid-d>div:nth-child(2){
+  background-color:#696969;
+  width:82px;
+  height:5px;
+  display:inline-block;
+  position:absolute;
+  margin-top:8px;
+}
+.new-hero-hid-d>div:nth-child(2)>div{
+  width:15px;
+  height:5px;
+  background-color:#fff;
+}
+/*新英雄上图片上隐藏的魔法攻击*/
+.new-hero-hid-m-a{
+  color:#fff;
+  font-size:14px;
+  width:150px;
+  height:20px;
+  position:absolute;
+  margin-top:100px;
+  margin-left:220px;
+}
+.new-hero-hid-m-a>div:nth-child(1){
+  display:inline-block;
+}
+.new-hero-hid-m-a>div:nth-child(2){
+  background-color:#696969;
+  width:82px;
+  height:5px;
+  display:inline-block;
+  position:absolute;
+  margin-top:8px;
+  z-index:1000;
+}
+.new-hero-hid-m-a>div:nth-child(2)>div{
+  width:34px;
+  height:5px;
+  background-color:#fff;
+}
+/*新英雄上图片上隐藏的查看详情*/
+.new-hero-hid-see{
+  width:155px;
+  height:45px;
+  background-image:url("../index_image/image/index-spr.png");
+  background-position:-400px 394px;
+  position:absolute;
+  margin-top:180px;
+  margin-left:30px;
+  line-height:42px;
+  font-size:14px;
+}
+.new-hero-hid-see>div{
+  float:left;
+}
+.new-hero-hid-see>div{
+  margin-left:40px;
+  position:absolute;
+  width:90px;
+  height:30px;
+  margin-top:6px;
+  line-height:30px;
+  display:inline-block;
+}
+.new-hero-hid-see>div>a{
+  text-decoration:none;
+  display:block;
+  color:#cc9933;
+}
+.new-hero-hid-see>div>a>div{
+  display:inline-block;
+  width:20px;
+  height:20px;
+  position:absolute;
+  margin-top:5px;
+  margin-left:2px;
+  background-image:url("../index_image/image/comm-spr-1.png");
+  background-position:97px -95px;
+}
+.new-hero-hid-see:hover>div>a>div{
+  animation:creation-right-arrow 1s;
+  animation-fill-mode:forwards;
+}
+/*新皮肤版块*/
+.new-skin{
+  width:402px;
+  float:left;
+  height:254px;
+  margin-left:16px;
+}
+/*新皮肤版块上面的图片*/
+.new-skin>div:nth-child(1){
+  height:254px;
+  width:402px;
+}
+/*隐藏的新皮肤栏*/
+.new-skin-hid{
+  width:1368px;
+  height:0px;
+  margin-left:-418.5px;
+}
+.new-skin:hover>.new-skin-hid{
+  height:190px;
+}
+/*隐藏的新皮肤栏上面的每个皮肤图片*/
+.new-skin-hids:hover>.new-skin-hids-imgs>a>div:nth-child(1){
+  transform: scale(1.25);
+}
+/*隐藏的新皮肤栏的每个皮肤*/
+.new-skin-hid>div{
+  float:left;
+  width:186px;
+  height:0px;
+  position:relative;
+  margin-left:10px;
+  margin-top:45px;
+  transition:all 0.25s linear;
+  overflow:hidden;
+}
+.new-skin:hover>.new-skin-hid>div{
+  height:120px;
+  margin-top:45px;
+}
+/*隐藏的新皮肤栏的每个皮肤图片*/
+.new-skin-hids-imgs>a>div:nth-child(1){
+  position:absolute;
+  transition:all 0.25s linear;
+  width:186px;
+  height:120px;
+  background-size:100% 100%;
+  position:absolute;
+  top:0px;
+}
+.new-skin-hids-imgs>a>div:nth-child(1)>img{
+  width:186px;
+  height:120px;
+  background-size:100% 100%;
+}
+.new-skin-hids-imgs>a{
+  display:block;
+  width:186px;
+  height:140px;
+  text-decoration:none;
+}
+/*新皮肤名字*/
+.new-skin-hids-imgs>a>div:nth-child(2){
+  color:#f0e68c;
+  width:186px;
+  height:35px;
+  font-size:13px;
+  text-align:center;
+  line-height:35px;
+  background-color:rgba(0,0,0,0.7);
+  margin-top:85px;
+  position:absolute;
+  left:0px;
+  font-weight:300;
+}
+/*游戏下载板块*/
+.game-download-gb{
+  width:501px;
+  height:336px;
+  margin-left:857px;
+  margin-top:17px;
+  position:absolute;
+}
+/*游戏下载板块上面的三个蓝框*/
+.game-download-top{
+  width:501px;
+  height:185px;
+}
+/*下载游戏*/
+.game-download{
+  width:368px;
+  height:170px;
+  display:inline-block;
+  position:absolute;
+}
+.game-download>a{
+  display:block;
+}
+/*下载游戏上面的遮罩层*/
+.game-download>a:nth-child(1)>div{
+  width:366px;
+  height:165px;
+  position:absolute;
+  background-color:rgba(0,0,0,0.1);
+  margin-top:-170px;
+}
+.game-download:hover>a:nth-child(1)>div{
+  background-color:transparent;
+}
+/*新手必备和领取中心*/
+.game-download-right{
+  display:inline-block;
+  position:absolute;
+  margin-left:380px;
+}
+/*新手必备和领取中心上面的框*/
+.game-download-right>div{
+  width:120px;
+  height:80px;
+  text-align:center;
+  background-image:url("../index_image/image/index-spr.png");
+  background-position:-191px 258px;
+}
+/*新手必备和领取中心上面字*/
+.game-download-right>div>a{
+  text-decoration:none;
+  color:#fff;
+  font-size:14px;
+  font-weight:600;
+  display:block;
+  position:absolute;
+}
+.game-download-right>div:nth-child(2){
+  margin-top:10px;
+}
+.game-download-right>div:nth-child(1)>div{
+  color:#fff;
+  position:absolute;
+  width:120px;
+  height:80px;
+  line-height:80px;
+  font-size:14px;
+  font-weight:600;
+}
+/*新手必备和领取中心上面的遮罩层*/
+.game-download-right>div:nth-child(1)>div:nth-child(1){
+  background-color:rgba(0,0,0,0.1);
+}
+.game-download-right>div:nth-child(2)>div{
+  background-color:rgba(0,0,0,0.1);
+  position:absolute;
+  width:120px;
+  height:80px;
+  display:none;
+}
+/*新手必备上隐藏的指引和礼包*/
+.game-download-right-hid{
+  background-color:#fff;
+  position:absolute;
+  width:120px;
+  height:80px;
+  display:none;
+}
+.game-download-right>div:hover>.game-download-right-hid{
+  display:block;
+}
+.game-download-right-hid>div{
+  float:left;
+  width:60px;
+  height:80px;
+}
+.game-download-right-hid>div>a{
+  text-decoration:none;
+  font-size:15px;
+  font-weight:600;
+  color:#000;
+}
+.game-download-right-hid>div:hover>a{
+  color:#1da6ba;
+}
+/*新手必备上隐藏的指引和礼包上面的logo*/
+.game-download-right-hid>div:nth-child(1)>a>div:nth-child(1){
+  background-image:url("../index_image/image/comm-spr.png");
+  background-position:203px 106px;
+  width:25px;
+  height:25px;
+  position:absolute;
+  margin-top:20px;
+  margin-left:17px;
+}
+
+/*新手必备上隐藏的指引的logo的动画效果*/
+.game-download-right-hid>div:nth-child(1):hover>a>div:nth-child(1){
+  animation:index-logos 1s;
+  animation-fill-mode:forwards;
+}
+@keyframes index-logos{
+  0%{transform:scale(1);}
+  10%{transform:scale(1);}
+  20%{transform:scale(1);}
+  30%{transform:scale(0.9);}
+  40%{transform:scale(1.3);}
+  50%{transform:scale(1);}
+  60%{transform:scale(1.15);}
+  70%{transform:scale(1);}
+  100%{transform:scale(1);}
+}
+/*新手必备上隐藏的指引和礼包四个字*/
+.game-download-right-hid>div:nth-child(1)>a>div:nth-child(2){
+  width:59px;
+  height:30px;
+  margin-top:50px;
+  line-height:20px;
+}
+/*新手必备上隐藏的礼包的logo*/
+.game-download-right-hid>div:nth-child(2)>a>div:nth-child(1){
+  background-image:url("../index_image/image/comm-spr.png");
+  background-position:180px 106px;
+  width:25px;
+  height:25px;
+  position:absolute;
+  margin-top:20px;
+  margin-left:17px;
+}
+/*新手必备上隐藏的礼包的logo的动画效果*/
+.game-download-right-hid>div:nth-child(2):hover>a>div:nth-child(1){
+  animation:index-logos 1.2s;
+  animation-fill-mode:forwards;
+}
+/*新手必备上隐藏的右边的礼包*/
+.game-download-right-hid>div:nth-child(2)>a>div:nth-child(2){
+  width:60px;
+  height:30px;
+  margin-top:50px;
+  position:absolute;
+  line-height:20px;
+}
+/*新手必备上隐藏的右边的礼包的边框*/
+.game-download-right-hid>div:nth-child(1){
+  width:59px;
+  border-right:1px solid #dcdcdc;
+}
+/*领取中心上面的遮罩层*/
+.game-download-right>div:nth-child(2)>a{
+  display:block;
+  width:120px;
+  height:80px;
+  line-height:80px;
+  position:absolute;
+  text-align:center;
+  background:rgba(0,0,0,0.1);
+}
+.game-download-right>div:nth-child(2):hover>a{
+  background-color:transparent;
+}
+/*玩家服务板块*/
+.game-download-bottom{
+  width:501px;
+  height:150px;
+}
+/*玩家服务的每个小方块*/
+.game-download-bottom-items>li{
+  float:left;
+  list-style-type:none;
+  width:114px;
+  height:67.5px;
+  line-height:70px;
+  margin-left:15px;
+  background-color:#fff;
+}
+.game-download-bottom-items>li:nth-child(4)~li{
+  margin-top:15px;
+}
+.game-download-bottom-items>li:nth-child(6)>a>div:last-child{
+  width:31px;
+  height:16px;
+  position:absolute;
+  background-image:url("../index_image/image/comm-spr-1.png");
+  background-position:190px -99px;
+}
+/*玩家服务的每个小方块上面的logo*/
+.game-download-bottom-items>li>a>div:nth-child(1){
+  width:27px;
+  height:27px;
+  display:inline-block;
+  position:absolute;
+  margin-top:20px;
+  margin-left:10px;
+  background-image:url("../index_image/image/comm-spr.png");
+}
+/*玩家服务的每个小方块上面的logo的动画效果*/
+.game-download-bottom-items>li:hover>a>div:nth-child(1){
+  animation:index-logos 1s;
+  animation-fill-mode:forwards;
+}
+.game-download-bottom-items>li:hover>a>div:nth-child(2){
+  color:#1da6ba;
+}
+.game-download-bottom-items>li:nth-child(1)>a>div:nth-child(1){
+  background-position:76px 192px;
+}
+.game-download-bottom-items>li:nth-child(2)>a>div:nth-child(1){
+  background-position:204px 133px;
+}
+.game-download-bottom-items>li:nth-child(3)>a>div:nth-child(1){
+  background-position:180px 133px;
+}
+.game-download-bottom-items>li:nth-child(4)>a>div:nth-child(1){
+  background-position:131px 190px;
+}
+.game-download-bottom-items>li:nth-child(5)>a>div:nth-child(1){
+  background-position:163px 192px;
+}
+.game-download-bottom-items>li:nth-child(6)>a>div:nth-child(1){
+  background-position:63px 110px;
+}
+.game-download-bottom-items>li:nth-child(7)>a>div:nth-child(1){
+  background-position:76px 134px;
+}
+/*玩家社区小方块*/
+.game-download-bottom-items>li:nth-child(8)>a>div:nth-child(1){
+  background-position:20px 188px;
+  width:20px;
+  height:20px;
+  margin-left:15px;
+  margin-top:23px;
+  border-radius:0%;
+}
+/*取消动画效果*/
+.game-download-bottom-items>li:nth-child(8):hover>a>div:nth-child(1){
+  animation:index-item8 1s;
+}
+/*玩家社区四个字*/
+.game-download-bottom-items>li>a>div:nth-child(2){
+  display:inline-block;
+  position:absolute;
+  margin-left:42px;
+  font-size:12px;
+  color:#000;
+}
+/*玩家社区后隐藏的选项栏*/
+.game-download-bottom-items-hid{
+  width:240px;
+  height:240px;
+  background-color:rgba(255,255,255,0.9);
+  position:absolute;
+  border-radius:50%;
+  margin-left:255px;
+  margin-top:-5px;
+  z-index:999;
+  display:none;
+}
+/*玩家社区后隐藏的选项栏的每个选项*/
+.game-download-bottom-items-hid>li{
+  width:45px;
+  height:55px;
+  position:absolute;
+  list-style:none;
+}
+/*玩家社区后隐藏的选项栏的视频*/
+.game-download-bottom-items-hid>li:nth-child(1){
+  margin-left:97px;
+  margin-top:15px;
+}
+/*玩家社区后隐藏的选项栏的赛事*/
+.game-download-bottom-items-hid>li:nth-child(2){
+  margin-left:25px;
+  margin-top:65px;
+}
+/*玩家社区后隐藏的选项栏的论坛*/
+.game-download-bottom-items-hid>li:nth-child(3){
+  margin-left:50px;
+  margin-top:150px;
+}
+/*玩家社区后隐藏的选项栏的创作馆*/
+.game-download-bottom-items-hid>li:nth-child(4){
+  margin-left:145px;
+  margin-top:150px;
+}
+/*玩家社区后隐藏的选项栏的攻略*/
+.game-download-bottom-items-hid>li:nth-child(5){
+  margin-left:170px;
+  margin-top:65px;
+}
+/*玩家社区后隐藏的选项栏中间的错号*/
+.game-download-bottom-items-hid>li:nth-child(6){
+  background-image:url("../index_image/image/index-spr.png");
+  background-position:29px -138px;
+  position:absolute;
+  margin-left:105px;
+  margin-top:108px;
+  width:30px;
+  height:30px;
+  background-size:1658.8% 1487.2%;
+}
+/*玩家社区后隐藏的选项栏的每个选项的logo*/
+.game-download-bottom-items-hid>li>a>div:nth-child(1){
+  width:40px;
+  height:40px;
+  margin-left:2px;
+  position:absolute;
+  border-radius:50%;
+  background-size:1531.2% 1372.8%;
+  background-image:url("../index_image/image/index-spr.png");
+}
+.game-download-bottom-items-hid>li:nth-child(1)>a>div:nth-child(1){
+  background-position:94px 307px;
+}
+.game-download-bottom-items-hid>li:nth-child(2)>a>div:nth-child(1){
+  background-position:267px 246px;
+}
+.game-download-bottom-items-hid>li:nth-child(3)>a>div:nth-child(1){
+  background-position:76px 378px;
+}
+.game-download-bottom-items-hid>li:nth-child(4)>a>div:nth-child(1){
+  background-position:94px 307px;
+}
+.game-download-bottom-items-hid>li:nth-child(5)>a>div:nth-child(1){
+  background-position:137px 307px;
+}
+.game-download-bottom-items-hid>li>a{
+  text-decoration:none;
+}
+/*玩家社区后隐藏的选项栏的每个选项的名字*/
+.game-download-bottom-items-hid>li>a>div:nth-child(2){
+  font-size:12px;
+  color:#000;
+  height:15px;
+  width:45px;
+  text-align:center;
+  position:absolute;
+  line-height:15px;
+  margin-top:40px;
+}
+.game-download-bottom-items-hid>li:hover>a>div:nth-child(2){
+  color:#1da6ba;
+}
+/*玩家社区后隐藏的选项栏的每个选项的logo的动画效果*/
+.game-download-bottom-items-hid>li:hover>a>div:nth-child(1){
+  animation:index-logos 1s;
+  animation-fill-mode:forwards;
+}
+/*云顶之奕与周免板块*/
+.qualifier-plate{
+  width:501px;
+  height:254px;
+  position:absolute;
+  margin-left:857px;
+  margin-top:400px;
+}
+/*云顶之奕与周免板块的每个图片*/
+.qualifier-plate>div{
+  float:left;
+}
+.qualifier-plate>div>a>div{
+  position:absolute;
+}
+/*官方漫画《拉克丝》*/
+.qualifier-item02{
+  position:absolute;
+  margin-top:133px;
+}
+.qualifier-item02>a>div:nth-child(1){
+  position:absolute;
+  top:0px;
+}
+/*官方漫画《拉克丝》隐藏的图片拉克丝拯救塞拉斯*/
+.qualifier-item02>a>div:nth-child(2){
+  position:absolute;
+  display:none;
+}
+.qualifier-plate>.qualifier-item02:hover>a>div:nth-child(2){
+  display:block;
+}
+/*重构潘森：不屈之枪*/
+.qualifier-item03{
+  float:left;
+  margin-left:260px;
+}
+.qualifier-item03>a>div:nth-child(1){
+  position:absolute;
+  top:0px;
+}
+/*重构潘森：不屈之枪隐藏的遮罩层*/
+.qualifier-item03>a>div:nth-child(2){
+  position:absolute;
+  width:242px;
+  height:178px;
+  background-image:url("../index_image/image/index-spr.png");
+  background-position:239px 3px;
+  opacity:0;
+  background-color:rgba(0,0,0,0.7);
+  transition:all 0.5s;
+}
+.qualifier-item03:hover>a>div:nth-child(2){
+  opacity:1;
+}
+.qualifier-item03>a{
+  text-decoration:none;
+}
+.qualifier-item03>a>div:nth-child(2)>span{
+  display:block;
+  text-align:center;
+}
+.qualifier-item03>a>div:nth-child(2)>span:nth-child(1){
+  color:#f0e68c;
+  margin-top:70px;
+  font-size:18px;
+}
+.qualifier-item03>a>div:nth-child(2)>span:nth-child(2){
+  font-size:14px;
+  color:#d3d3d3;
+  margin-top:3px;
+}
+/*周免*/
+.qualifier-item04{
+  width:239px;
+  margin-top:198px;
+  margin-left:260px;
+  height:57px;
+}
+.qualifier-item04:hover{
+  cursor:pointer;
+}
+/*周免上面的logo*/
+.qualifier-item04>div:nth-child(1){
+  position:absolute;
+  margin-top:198px;
+  width:240px;
+  height:57px;
+  margin-left:1px;
+  top:0px;
+  background-image:url("../index_image/image/index-spr.png");
+  background-position:446px -254px;
+}
+.qualifier-item04>div:nth-child(1)>div{
+  float:left;
+}
+.qualifier-item04>div:nth-child(1)>div:nth-child(1){
+  width:20px;
+  height:9px;
+  margin-top:24px;
+  margin-left:65px;
+  background-image:url("../index_image/image/index-spr.png");
+  background-position:-532px 346px;
+}
+.qualifier-item04>div:nth-child(1)>div:nth-child(2){
+  color:#fff;
+  width:36px;
+  height:18px;
+  margin-top:17px;
+  margin-left:10px;
+}
+.qualifier-item04>div:nth-child(1)>div:nth-child(3){
+  background-image:url("../index_image/image/comm-spr.png");
+  width:20px;
+  height:20px;
+  margin-top:16px;
+  background-position:33px 162px;
+}
+.qualifier-item04:hover>div:nth-child(1)>div:nth-child(3){
+  animation:creation-right-arrow 1s;
+  animation-fill-mode:forwards;
+}
+.qualifier-item04>div:nth-child(1)>div:nth-child(4){
+  width:20px;
+  height:9px;
+  margin-top:24px;
+  margin-left:157px;
+  position:absolute;
+  background-image:url("../index_image/image/index-spr.png");
+  background-position:-505px 346px;
+}
+.qualifier-item04>div:nth-child(2){
+  width:420px;
+  position:relative;
+  height:0px;
+  margin-top:50px;
+  margin-left:-179px;
+  z-index:999;
+  
+  opacity:0;
+  transition-property:opacity,margin-top;
+  transition-duration:0.5s;
+  padding-top:7px;
+  overflow:hidden;
+}
+/*隐藏的周免英雄头像*/
+.qualifier-item04-hid{
+  position:absolute;
+  background:#fff;
+  width:420px;
+  box-shadow:0 0 12px #bbb; 
+  border-radius:2px;
+}
+.qualifier-item04:hover>div:nth-child(2){
+  opacity:1;
+  height:180px;
+  margin-top:65px;
+ }
+/*隐藏的每个周免英雄头像*/
+.qualifier-item04-hid>li{
+  list-style:none;
+  float:left;
+  margin-left:7px;
+  margin-top:5px;
+}
+/*隐藏下拉菜单的朝上箭头*/
+.qualifier-item04>div:nth-child(2)>div:nth-child(1){
+  background-image:url("../index_image/image/index-spr.png");
+  width:14px;
+  height:7px;
+  background-position:-556px 346px;
+  position:absolute;
+  margin-top:-6px;
+  margin-left:288px;
+  z-index:1000;
+}
+.qualifier-item04-hid>li:nth-child(1){
+  margin-left:15px;
+}
+.qualifier-item04-hid>li:nth-child(8){
+  margin-left:15px;
+}
+.qualifier-item04-hid>li:nth-child(15){
+  margin-left:15px;
+}
+/*隐藏的每个周免英雄头像图片*/
+.qualifier-item04-hid>li>a>img{
+  background-size:46px;
+  width:46px;
+  height:46px;
+  border-radius:50%;
+  border:2px solid #bb9a6c;
+}

@@ -1,0 +1,64 @@
+.banner-information{
+  height:380px;
+  width:1358px;
+  margin:0 auto;
+}
+/*轮播图板块*/
+.ad-banner{
+  width:820px;
+  height:380px;
+  position:relative;
+  overflow:hidden;
+  float:left;
+}
+/*轮播图框*/
+#banner{
+  width:820px;
+  height:340px;
+  position:relative;
+}
+/*轮播图框*/
+#ul-imgs{
+  list-style-type:none;
+  margin:0px;
+  padding:0px;
+}
+#ul-imgs.transition{
+  transition:all 0.45s linear;
+}
+#ul-imgs>li{
+  width:820px;
+  float:left;
+  list-style-type:none;
+}
+/*轮播图框里的图片*/
+#ul-imgs>img{
+  width:820px;
+}
+/*轮播图下面的选项栏*/
+#ul-idxs{
+  margin:0px;
+  padding:0px;
+  width:820px;
+  height:40px;
+  position:absolute;
+  margin-top:340px;
+}
+/*轮播图下面的选项栏的每个选项*/
+#ul-idxs>li{
+  float:left;
+  width:164px;
+  height:40px;
+  background-color:#e3e3e3;
+  list-style-type:none;
+  text-align:center;
+  line-height:40px;
+  font-size:14px;
+}
+/*触发事件时轮播图下面的选项栏的每个选项*/
+#ul-idxs>li.active{
+  background-color:white;
+  border-bottom:2px solid #cc9933;
+  height:38px;
+  color:#cc9933;
+}

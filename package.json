@@ -13,7 +13,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "jest",
+    "test": "jest --watchAll",
     "ts": "tsnd --respawn --no-notify",
     "js": "node-dev --respawn --no-notify"
   },
