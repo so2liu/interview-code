@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>三列1</title>
+    <style>
+      .sub {
+        width: 15%;
+        float: left;
+        background-color: lightpink;
+      }
+      .extra {
+        width: 15%;
+        float: right;
+        background-color: lightpink;
+      }
+      .main {
+        margin: 0 15%;
+        background-color: lightsalmon;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="content">
+      <div class="sub">
+        sub
+      </div>
+      <div class="extra">
+        extra
+        <div>
+          一些说明:注意DOM文档的书写顺序，先写两侧栏，再写主面板，更换后则侧栏会被挤到下一列（圣杯布局和双飞翼布局都会用到）。
+          　这种布局方式比较简单明了，但缺点是渲染时先渲染了侧边栏，而不是比较重要的主面板。二列的实现方法如果是左边带有侧栏的二栏布局，则去掉右侧栏，不要设置主面板的margin-right值，其他操作相同。反之亦然。b.
+          position+margin原理说明：通过绝对定位将两个侧栏固定，同样通过外边距给两个侧栏腾出空间，中间列自适应。DOM文档:
+          来源：知乎
+          著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+        </div>
+      </div>
+      <div class="main">
+        <h1>
+          main
+        </h1>
+      </div>
+    </div>
+  </body>
+</html>

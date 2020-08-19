@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>居中</title>
+    <style>
+      div {
+        background-color: lightcoral;
+        height: 4rem;
+      }
+      div :not(class) {
+        background-color: lightgreen;
+        height: 2rem;
+      }
+      .inline-parent {
+        text-align: center;
+      }
+      .block-child {
+        width: 10rem;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .block-unknow-width-parent {
+        text-align: center;
+      }
+      .block-unknow-width-child {
+        display: inline;
+      }
+      .flex-parent {
+        display: flex;
+        justify-content: center;
+      }
+      .single-inline-parent {
+        height: 100%;
+      }
+      .multi-inline-parent {
+        display: table-cell;
+        vertical-align: middle;
+      }
+      .v-block-parent {
+        position: relative;
+      }
+      .v-block-child {
+        position: absolute;
+        top: 50%;
+        left: 80%;
+        transform: translate(0, -50%);
+      }
+    </style>
+  </head>
+  <body>
+    <center>
+      <h2>水平居中</h2>
+    </center>
+    <h3>行内元素</h3>
+    <div class="inline-parent">
+      <span>
+        center
+      </span>
+    </div>
+    <h3>
+      定宽Block
+    </h3>
+    <div>
+      <div class="block-child">
+        center
+      </div>
+    </div>
+    <h3>
+      不定宽Block
+    </h3>
+    <div class="block-unknow-width-parent">
+      <div class="block-unknow-width-child">
+        center
+      </div>
+    </div>
+    <h3>通用flex</h3>
+    <div class="flex-parent">
+      <div>
+        center
+      </div>
+    </div>
+    <center>
+      <h2>
+        垂直居中
+      </h2>
+    </center>
+    <h3>
+      父元素一定，子元素为单行inline
+    </h3>
+    <div class="single-inline-parent">
+      <span>center</span>
+    </div>
+    <h3>
+      父元素一定，子元素为多行inline
+    </h3>
+    <div class="multi-inline-parent">
+      <span>center</span>
+    </div>
+    <h3>
+      block元素
+    </h3>
+    <div class="v-block-parent">
+      <div class="v-block-child">center</div>
+    </div>
+  </body>
+</html>
