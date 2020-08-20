@@ -1,9 +1,4 @@
-import { myTest, buildBinaryTree, TreeNode } from "../../utils";
-
-const input = [1, null, 2, 3];
-
-const tree = buildBinaryTree(input);
-console.log(tree);
+import { TreeNode } from "./94";
 
 function traversalPreorder(root: TreeNode | null): number[] {
   if (!root) return [];
@@ -35,10 +30,3 @@ function traversalPreorderRecursive(
     ...traversalPreorderRecursive(root.right),
   ];
 }
-
-myTest(traversalPreorder(tree), [1, 2, 3]);
-myTest(traversalPreorderRecursive(tree), [1, 2, 3]);
-const tree2 = buildBinaryTree([3, 1, 2]);
-console.log(tree2);
-myTest(traversalPreorder(tree2), [3, 1, 2]);
-myTest(traversalPreorderRecursive(tree2), [3, 1, 2]);

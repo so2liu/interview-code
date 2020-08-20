@@ -1,4 +1,4 @@
-import { TreeNode, buildBinaryTree, myTest } from "../../utils";
+import { TreeNode } from "./94";
 
 function levelOrder(root: TreeNode | null): number[][] {
   const output: number[][] = [];
@@ -13,6 +13,7 @@ function levelOrder(root: TreeNode | null): number[][] {
     const queueLength = queue.length;
     for (let index = 0; index < queueLength; index++) {
       const node = queue.shift();
+      if (!node) continue;
       output[level].push(node.val);
 
       if (node.left) queue.push(node.left);
@@ -23,6 +24,3 @@ function levelOrder(root: TreeNode | null): number[][] {
 
   return output;
 }
-
-const tree = buildBinaryTree([3, 9, 20, null, null, 15, 7]);
-myTest(levelOrder(tree), [[3], [9, 20], [15, 7]]);

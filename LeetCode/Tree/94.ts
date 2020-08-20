@@ -1,4 +1,8 @@
-import { myTest, TreeNode, buildBinaryTree } from "../../utils";
+export interface TreeNode {
+  val: number;
+  left: TreeNode;
+  right: TreeNode;
+}
 
 function inorderTraversalRecursive(root: TreeNode | null): number[] {
   if (!root) return [];
@@ -16,7 +20,7 @@ function inorderTraversal(root: TreeNode | null): number[] {
 
   const stack: TreeNode[] = [];
   const output: number[] = [];
-  let current: TreeNode = root;
+  let current: TreeNode | undefined = root;
 
   while (stack.length > 0 || current !== null) {
     while (current) {
@@ -24,12 +28,9 @@ function inorderTraversal(root: TreeNode | null): number[] {
       current = current.left;
     }
     current = stack.pop();
+    if (!current) continue;
     output.push(current.val);
     current = current.right;
   }
   return output;
 }
-
-const tree = buildBinaryTree([1, null, 2, 3]);
-myTest(inorderTraversalRecursive(tree), [1, 3, 2]);
-myTest(inorderTraversal(tree), [1, 3, 2]);

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>事件委托</title>
+  </head>
+  <body>
+    <ul>
+      <li>A</li>
+      <li>B</li>
+      <li>C</li>
+      <li>
+        <div>
+          <span>
+            D
+          </span>
+        </div>
+      </li>
+    </ul>
+    <script>
+      const ul = document.querySelector("ul");
+
+      delegate(ul, "click", "li", (e) => alert(e.innerHTML));
+
+      function delegate(el, eventName, selector, callback) {
+        el.addEventListener(eventName, (e) => {
+          const target = e.target || e.srcElement;
+
+          const selected = el.querySelectorAll(selector);
+
+          if (Array.from(selected).some((node) => node.contains(e.target)))
+            callback(target);
+        });
+      }
+    </script>
+  </body>
+</html>
