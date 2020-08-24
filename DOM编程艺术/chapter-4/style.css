@@ -1,0 +1,25 @@
+img {
+  display: block;
+  margin: auto;
+}
+
+ul {
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+li {
+  list-style: none;
+  display: inline-block;
+  margin: 0.3rem 1rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  color: lightcoral;
+  text-decoration: underline lightcoral;
+}
