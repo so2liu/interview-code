@@ -1,0 +1,32 @@
+.loader {
+    display: inline-block;
+
+    width: 100px;
+    height: 100px;
+    margin: 2rem;
+    background: url(./resource/loader-multi.png) 0 0;
+    text-indent: 200%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+@keyframes load-slide {
+    to {
+        background-position: -800px 0;
+    }
+}
+
+@keyframes load-rotate {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.load-rotate {
+    border-radius: 50%;
+    animation: load-rotate 1s steps(8) 1s infinite;
+}
+
+.load-slide {
+    animation: load-slide 1s steps(8) 1s infinite;
+}

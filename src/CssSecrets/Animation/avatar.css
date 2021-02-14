@@ -1,0 +1,44 @@
+.avatar-container {
+    background-color: lightpink;
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+}
+
+.avatar-path {
+    animation: spin 6s infinite linear;
+    transform-origin: 50% 150px;
+}
+
+.avatar {
+    animation: inherit;
+    animation-direction: reverse;
+    height: 100px;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(1turn);
+    }
+}
+
+@keyframes spin2 {
+    from {
+        transform: rotate(0turn) translateY(-150px) translateY(50%)
+            rotate(1turn);
+    }
+    to {
+        transform: rotate(1turn) translateY(-150px) translateY(50%)
+            rotate(0turn);
+    }
+}
+
+.avatar2 {
+    animation: spin2 6s infinite linear;
+}
+
+.avatar2 {
+    display: block;
+    width: 100px;
+    margin: calc(50% - 150px) auto 0;
+}

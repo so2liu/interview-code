@@ -1,0 +1,9 @@
+@keyframes blink-smoonth {
+    to {
+        color: transparent;
+    }
+}
+
+.highlight {
+    animation: blink-smoonth 1s infinite alternate;
+}

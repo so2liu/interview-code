@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="./index.css" />
+        <link rel="stylesheet" href="./components.css" />
+        <link rel="stylesheet" href="./ball.css" />
+        <link rel="stylesheet" href="./input.css" />
+        <link rel="stylesheet" href="./input.css" />
+        <link rel="stylesheet" href="./loader.css" />
+        <link rel="stylesheet" href="./blink.css" />
+        <link rel="stylesheet" href="./printer.css" />
+        <link rel="stylesheet" href="./panoramic.css" />
+        <link rel="stylesheet" href="./avatar.css" />
+    </head>
+    <body>
+        <section class="ball-section">
+            <div class="ball bounce1"></div>
+            <div class="ball bounce2"></div>
+            <div class="ball bounce3"></div>
+        </section>
+        <section class="input-section">
+            <label for="name">
+                Your username: <input type="text" id="username" />
+                <span class="callout">
+                    Only letters, underscores (_) and hyphens (-) are allowed
+                </span>
+            </label>
+            <div>
+                <em> 没做出来 </em>
+            </div>
+        </section>
+        <section class="loader-section">
+            <div class="loader load-slide">Loading...</div>
+            <div class="loader load-rotate">Loading...</div>
+        </section>
+        <section class="blink-section">
+            <h3 class="highlight">Blink this line please</h3>
+        </section>
+        <section class="printer-section">
+            <h3 class="printer">I want to have a printer style</h3>
+        </section>
+        <section class="panoramic-section">
+            <div class="panoramic"></div>
+        </section>
+        <section class="avatar-section">
+            <div class="avatar-container">
+                <div class="avatar-path">
+                    <img
+                        src="./resource/avataaars.png"
+                        alt="avatar"
+                        class="avatar"
+                    />
+                </div>
+            </div>
+            <em
+                >此处需要同时进行两个动画。它们不能附着在同一个element的原因是，它们的rotate圆心不一样</em
+            >
+        </section>
+        <section class="avatar2-section">
+            <div class="avatar-container">
+                <img
+                    src="./resource/avataaars.png"
+                    alt="avatar"
+                    class="avatar2"
+                />
+            </div>
+            <em
+                >此处需要同时进行两个动画。它们不能附着在同一个element的原因是，它们的rotate圆心不一样</em
+            >
+        </section>
+    </body>
+</html>

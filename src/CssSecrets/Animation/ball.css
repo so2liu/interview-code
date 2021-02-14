@@ -1,0 +1,57 @@
+@keyframes bounce1 {
+    60%,
+    80%,
+    to {
+        transform: translateY(350px);
+    }
+    70% {
+        transform: translateY(250px);
+    }
+    90% {
+        transform: translateY(300px);
+    }
+}
+
+.bounce1 {
+    animation: bounce1 3s infinite;
+}
+
+@keyframes bounce2 {
+    60%,
+    80%,
+    to {
+        transform: translateY(400px);
+        /* 弹起时，越来越慢 */
+        animation-timing-function: ease-out;
+    }
+    70% {
+        transform: translateY(300px);
+    }
+    90% {
+        transform: translateY(360px);
+    }
+}
+
+.bounce2 {
+    animation: bounce2 3s infinite ease-in;
+}
+
+@keyframes bounce3 {
+    60%,
+    80%,
+    to {
+        transform: translateY(400px);
+        /* 弹起时，越来越慢 */
+        animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+    70% {
+        transform: translateY(300px);
+    }
+    90% {
+        transform: translateY(360px);
+    }
+}
+
+.bounce3 {
+    animation: bounce3 3s infinite cubic-bezier(0.775, 0.05, 0.855, 0.06);
+}

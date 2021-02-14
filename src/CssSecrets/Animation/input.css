@@ -1,0 +1,8 @@
+input:not(:focus) + .callout {
+    transform: scale(0);
+}
+
+.callout {
+    transition: 0.5s transform;
+    transform-origin: 1.4em -0.4em;
+}
