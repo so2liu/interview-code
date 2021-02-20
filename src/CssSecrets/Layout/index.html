@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Layout</title>
+        <link rel="stylesheet" href="./selfApply.css" />
+        <link rel="stylesheet" href="./tableWidth.css" />
+    </head>
+    <body>
+        <h1>Structure and Layout</h1>
+        <section class="self-apply">
+            <h2>自适应内部元素</h2>
+            <p>
+                Let’s assume we have some text here. Bacon ipsum dolor sit amet
+                turkey veniam shankle, culpa short ribs kevin t-bone occaecat.
+            </p>
+            <figure>
+                <img src="./resource/florence.jpg" />
+                <figcaption>
+                    The great Sir Adam Catlace was named after Countess Ada
+                    Lovelace, the first programmer ever.
+                </figcaption>
+            </figure>
+            <p>
+                We also have some more text here. Et laborum venison nostrud, ut
+                veniam sint kielbasa ullamco pancetta.
+            </p>
+            <P>关键在于 <pre>width: min-content</pre> </P>
+        </section>
+        <section class="table-width">
+            <h2>精确控制表格列宽</h2>
+            <P>关键在于 <pre>table-layout: fixed; width: 100%</pre> </P>
+            <div>
+                <table>
+                    <tr>
+                        <td>If we don’t…</td>
+                        <td>specify a cell width, they will be assigned one that depends on their contents. Notice how the cell with the more content here is much wider.</td>
+                    </tr>
+                </table>
+                
+                <table>
+                    <tr>
+                        <td>If we don’t…</td>
+                        <td>specify a cell width, they will be assigned one that depends on their contents. Notice how the cell with the more content here is much wider.</td>
+                    </tr>
+                    <tr>
+                        <td>All rows take part in calculating the widths, not just the first one.</td>
+                        <td>Notice how the dimensions here are different than the previous example.</td>
+                    </tr>
+                </table>
+                
+                <table>
+                    <tr>
+                        <td style="width: 1000px">If we specify a width, it will not always be followed. I have a width of <code>1000px</code>…</td>
+                        <td style="width: 2000px">…and I have a width of <code>2000px</code>. Because there’s not enough space for <code>3000px</code>, they are reduced proportionally, to 33.3% and 66.6% of the total width.</td>
+                    </tr>
+                </table>
+                
+                <table>
+                    <tr>
+                        <td>If we prevent word wrapping, the table can become so wide it grows beyond its container.</td>
+                        <td class="preformatted">…and <code>text-overflow: ellipsis</code> doesn’t help either.</td>
+                    </tr>
+                </table>
+                
+                <table>
+                    <tr>
+                        <td>Large images and blocks of code can also cause the same issue.</td>
+                        <td><img src="./resource//florence.jpg" /></td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+        <section class="style-sibling-count">
+            <h2>当sibling只有4个的时候，选中这四个sibling</h2>
+            <h3>选中当只要4个li的时候</h3>
+            <pre>li:first-child:nth-last-child(4), li:first-child:nth-last-child(4) ~li {}</pre>
+            <h3>选中 >= 4个li的时候，全部</h3>
+            <pre>li:first-child:nth-last-child(n+4), li:first-child:nth-last-child(n+4) ~li {}</pre>
+            <cite>n改为-n，选取前四个元素</cite>
+        </section>
+        <section class="fluid-fixed">
+            <h2>满幅背景，定宽内容（例如header、footer）</h2>
+            <div>
+                我是一个很宽的抬头
+            </div>
+        </section>
+    </body>
+</html>
